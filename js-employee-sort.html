@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Id Sort</title>
+</head>
+<body>
+    
+    <script>
+        const empList = [
+            {
+                name : 'John Doe',
+                dept : 'php',
+                id : 5
+            },
+            {
+                name : 'Paul Smith',
+                dept : 'Mern',
+                id : 4
+            },
+            {
+                name : 'Tom Smith',
+                dept : 'SEO',
+                id : 7
+            }];
+
+            let len = empList.length;
+            for(let i = 0; i<len-1;i++){
+                for(let j = 0;j<len -1-i;j++){
+                    if(empList[j].id > empList[j+1].id){
+                        let temp = empList[j];
+                        empList[j] = empList[j+1];
+                        empList[j+1] = temp; 
+                    }
+                }
+            }
+            console.log(empList);
+    </script>
+</body>
+</html>
