@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="samplewebform.css">
+    <script src="sampleWebForm.js" defer></script>
+  </head>
+  <body>
+    <form id="userForm" onsubmit="return validateForm()">
+      <h1>Sample Web Form</h1>
+      <label
+        >Full Name:
+        <input
+          type="text"
+          id="fullName"
+          placeholder="Enter your full name"
+          required
+        />
+        <span class="error" id="nameError"></span> </label
+      ><br />
+
+      <label
+        >Email:
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+        <span class="error" id="emailError"></span> </label
+      ><br />
+
+      <label
+        >Phone Number:
+        <input
+          type="number"
+          id="phone"
+          placeholder="Enter your phone number"
+          required
+        />
+        <span class="error" id="phoneError"></span> </label
+      ><br />
+
+      <label
+        >Password:
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter a password"
+          required
+        />
+        <span class="error" id="passwordError"></span> </label
+      ><br />
+
+      <label>Gender:</label><br />
+      <div class="radio-group">
+        <div class="radio-option">
+          <input type="radio" name="gender" value="Male" />
+          <label>Male</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" name="gender" value="Female" />
+          <label>Female</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" name="gender" value="Other" />
+          <label>Other</label>
+        </div>
+      </div>
+      <span class="error" id="genderError"></span>
+
+      <br /><label
+        >Favorite Color:
+        <select id="color" required>
+          <option value="">Select your favourite color</option>
+          <option value="Red">Red</option>
+          <option value="Blue">Blue</option>
+          <option value="Green">Green</option>
+          <option value="Yellow">Yellow</option>
+        </select>
+        <span class="error" id="colorError"></span> </label
+      ><br />
+
+      <label
+        >Upload Resume:
+        <input type="file" id="resume" accept=".pdf,.doc,.docx" required />
+        <span class="error" id="resumeError"></span> </label
+      ><br />
+
+      <label>
+        <input type="checkbox" id="terms" /> I agree to the terms and conditions
+      </label>
+      <span class="error" id="termsError"></span><br />
+
+      <button type="submit">Submit</button>
+
+      <br /><br /><br />
+    </form>
+  </body>
+</html>
